@@ -37,4 +37,5 @@ function displayHistory() {
 
     histories.appendChild(newRow);
   });
-}
+}  
+
