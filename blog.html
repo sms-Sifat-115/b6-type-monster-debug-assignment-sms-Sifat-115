@@ -5,9 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: white;
+            background-image: url("./bg.png");
+            background-size: cover;
+            background-position: left top;
+            font-family: 'Roboto', sans-serif;
+        }
+    
+    </style>
   </head>
-  <body>
-    <h1>BLOG</h1>
+  <body class="container text-bg-dark">
+    <Section class="m-5 p-5">
+        <h1 class="text-center">BLOG</h1>
+        <div class="accordion text-bg-dark" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header text-bg-dark" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Local Storage Vs Session Storage
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    HTML5 local storage makes it possible to store values in the browser which can survive the browser session.
+                    Session storage is available inside the same browser window for as long as the window is open. When the browser window is closed, the session storage associated with that window is deleted. Multiple windows from the same origin (URL) cannot see each others session storage. Popup windows opened from the same window can see session storage, and so can iframes inside the same window.
+                    Local storage is available in the browser to all windows with the same origin (domain). Data stored in the local storage is also available after the window has been closed. The next time a window is opened and loads the page from the same origin, the page can access the stored values there again.               The properties set in the HTML5 local storage can only be read by pages from the same domain as the page that set the properties.
+                    HTML web storage provides two objects for storing data on the client:                   
+                    window.localStorage: stores data with no expiration date
+                    window.sessionStorage : stores data for one session (data is lost when the browser tab is closed).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Global Scope Vs Block Scope 
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Global Scope - A globally scoped variable can be accessed anywhere in the program Local or Function Scope - A locally scoped variable can only be accessed in the function where it was declared Block Scope - A block scoped variable can only be accessed in the set of curly brackets where it was declared (only applies to let and const).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How JavaScript event loop works?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    The Event Loop is the system that JavaScript uses in the browser to handle the execution of multiple pieces of code. It consists of the Call Stack, Web APIs, and the Callback Queue. It is responsible for giving JavaScript its asynchronous programming ability.
+                    JavaScript is a single-threaded, asynchronous language with a concurrency model that is based on a “run to completion” event loop… wait, what? Read on, and this sentence will hopefully make sense by the time you finish.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How many types of undefined are there?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value undefined
+                    In all non-legacy browsers, undefined is a non-configurable, non-writable property. (Even when this is not the case, avoid overriding it.)
+                    A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
+                </div>
+              </div>
+            </div>
+          </div>
+    </Section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>
